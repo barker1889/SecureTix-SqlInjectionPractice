@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>SecureTixWeb</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Setup\CreateDb.sql" />
+    <None Remove="Setup\CreateTables.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Login\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Login\Index.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Setup\CreateTables.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setup\CreateDb.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\ViewComponents\ViewModels\" />
+    <Folder Include="Controllers\ViewModels\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+
+</Project>

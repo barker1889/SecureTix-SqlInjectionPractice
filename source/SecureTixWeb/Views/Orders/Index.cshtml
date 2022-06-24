@@ -1,0 +1,29 @@
+﻿@model SecureTixWeb.Controllers.OrdersListViewModel
+@{
+    ViewData["Title"] = "Basket";
+}
+
+<h2 class="container-title">My Orders</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>OrderId</th>
+        <th>Total Value</th>
+        <th>Order Date</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var row in Model.Orders)
+    {
+        <tr>
+            <td>@row.OrderId</td>
+            <td>@row.TotalValue</td>
+            <td>@row.ConfirmedAt.ToString("G")</td>
+            <td>@Html.ActionLink("View Order Details", "Details", "Orders", new {orderId = @row.OrderId}, new {@class = "btn btn-primary"})</td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,36 @@
+﻿@model SecureTixWeb.Controllers.ViewModels.BasketItemsViewModel
+@{
+    ViewData["Title"] = "Basket";
+}
+
+<h2 class="container-title">Basket - @Model.Owner</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Event</th>
+        <th>Tickets</th>
+        <th>Cost</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var row in Model.BasketItems)
+    {
+        <tr>
+            <td>@row.EventName</td>
+            <td>@row.TicketCount @@ £@row.PricePerTicket</td>
+            <td>@row.TotalPrice</td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+@if (!Model.PaidAt.HasValue)
+{
+    <form asp-controller="Basket" asp-action="Pay" method="post">
+        <div class="pay-now-holder">
+            <input class="btn btn-success" type="submit" value="Pay Now"/>
+        </div>
+    </form>
+}

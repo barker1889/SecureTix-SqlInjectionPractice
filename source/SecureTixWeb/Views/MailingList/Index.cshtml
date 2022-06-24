@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2 class="container-title">Mailing List</h2>
+
+<form asp-controller="MailingList" asp-action="SignUp" method="post">
+    <div class="mb-3">
+        <label for="username" class="form-label">Email Address</label>
+        <input type="email" class="form-control" name="email" id="email">
+    </div>
+    
+    <input class="btn btn-primary" type="submit" value="Sign up for the mailing list"/>
+</form>

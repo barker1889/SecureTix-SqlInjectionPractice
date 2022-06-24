@@ -1,0 +1,31 @@
+﻿@model SecureTixWeb.Controllers.OrderDetailViewModel
+@{
+    ViewData["Title"] = "Order Details";
+}
+
+<h2 class="container-title">My Orders - @Model.Order.OrderId</h2>
+
+<h4 class="mb-5">£@Model.Order.TotalValue - confirmed on @Model.Order.ConfirmedAt</h4>
+
+<table>
+    <thead>
+    <tr>
+        <th>Event</th>
+        <th>Description</th>
+        <th>Tickets</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    @foreach (var row in Model.Items)
+    {
+        <tr>
+            <td>@row.EventName</td>
+            <td>@row.EventDescription</td>
+            <td>@row.TicketCount @@ £@row.PricePerTicket</td>
+            <td>$@(row.TicketCount * row.PricePerTicket)</td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,7 @@
+﻿@model SecureTixWeb.Controllers.ViewModels.BasketItemsViewModel
+@{
+    ViewData["Title"] = "Basket";
+}
+
+<h2 class="container-title">Basket - @Model.Owner</h2>
+<h3>This basket has already been paid for on @Model.PaidAt.Value.ToString("G")</h3>

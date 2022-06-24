@@ -1,0 +1,14 @@
+﻿@model SecureTixWeb.Controllers.ViewComponents.ViewModels.BasketComponentViewModel
+
+@if (Model.NumberOfItems > 0)
+{
+    <div class="nav-item">
+        <a asp-action="Index" asp-controller="Basket" class="nav-link">Basket (@Model.NumberOfItems)</a>
+    </div>
+}
+else
+{
+    <div class="nav-item">
+        <a asp-action="Index" asp-controller="Basket" class="nav-link disabled">Basket (0)</a>
+    </div>
+}

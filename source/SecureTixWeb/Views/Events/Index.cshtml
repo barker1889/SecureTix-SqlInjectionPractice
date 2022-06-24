@@ -1,0 +1,57 @@
+﻿@model SecureTixWeb.Controllers.ViewModels.EventsListViewModel
+@{
+    ViewData["Title"] = "Events";
+}
+
+<h2 class="container-title">Events Listings</h2>
+
+<form asp-controller="Events" asp-action="Search" method="post">
+    <div class="input-group  mb-5">
+        <input type="text" class="form-control" name="searchTerm" value="@Model.SearchTerm">
+        <input class="btn btn-primary" type="submit" value="Search" />
+    </div>
+</form>
+
+<table>
+    <thead>
+    <tr>
+        <th>Event Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (!Model.EventModels.Any())
+    {
+        @Html.Raw("<tr><td colspan=\"3\">No results found for search term '" + Model.SearchTerm + "' </td></td>")
+    }
+
+    @foreach (var ev in Model.EventModels)
+    {
+        <tr>
+            <td>@ev.Name</td>
+            <td>@ev.Description</td>
+            <td>@ev.Price</td>
+            <td class="event-actions">
+                @if (ev.SoldOut)
+                {
+                    <button class="btn btn-sm btn-danger btn-full-width" disabled="">Sold Out</button>
+                }
+                else
+                {
+                    <form asp-controller="Basket" asp-action="Add" method="post">
+                        <input type="hidden" name="eventId" value="@ev.Id"/>
+
+                        <div class="input-group input-group-sm">
+                            <input type="number" name="ticketCount" class="form-control" value="0">
+                            <input class="btn btn-primary" type="submit" value="Add To Basket"/>
+                        </div>
+                        <input type="hidden" value="@ev.Id"/>
+                    </form>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

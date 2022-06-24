@@ -1,0 +1,32 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Log in";
+    Layout = "_Login";
+}
+
+<h2>Log In</h2>
+<form asp-controller="Login" asp-action="LogIn" method="post">
+    <div class="mb-3">
+        <label for="username" class="form-label">Email address</label>
+        <input type="email" class="form-control" name="username" id="username" placeholder="name@example.com">
+    </div>
+    
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" name="password" id="password">
+    </div>
+    
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        @Html.Raw("<div class=\"alert alert-danger\" role=\"alert\">" + ViewBag.ErrorMessage + "</div>")
+    }
+    
+    @if (!string.IsNullOrEmpty(ViewBag.ReturnUrl))
+    {
+        <input type="hidden" name="returnUrl" value="@ViewBag.ReturnUrl"/>
+    }
+
+    <input class="btn btn-primary" type="submit" value="Log In"/>
+    <a class="btn btn-primary" asp-action="Register">Register</a>
+</form>

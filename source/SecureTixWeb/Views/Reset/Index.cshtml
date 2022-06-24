@@ -1,0 +1,8 @@
+﻿@{
+    ViewData["Title"] = "RESET";
+}
+
+<form asp-action="ConfirmReset" asp-controller="Reset" method="post">
+    <h2 class="container-title">This will reset the database to it's original state - are you sure?</h2>
+    <input class="btn btn-danger" type="submit" value="Yes, reset everything"/>
+</form>
