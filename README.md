@@ -26,7 +26,7 @@ Challenges can be completed in any order, however following the suggested order 
 ## Tips
 * Go through the steps of purchasing a ticket and viewing the order first, this will give an idea of the features and processes involved
 * Be aware of what data is normally returned on a page 
-* Keep track of any useful data you retrieve
+* Keep a note of any useful data you retrieve - tables, columns, id's and other data may be useful later on
 * Keep a note of working exploits, you may be able to repurpose them later on
 * If you're getting a lot of invalid SQL type errors:
   *  Make sure you're closing any string you may be injecting into
