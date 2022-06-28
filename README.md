@@ -5,7 +5,7 @@
 * Clone the repo
 * Navigate to the `source\SecureTixWeb` in a CLI
 * Run `dotnet run` from the CLI
-** If you have nuget authentication errors, run `dotnet run --interactive` and it will prompt for a login
+  * If you have nuget authentication errors, run `dotnet run --interactive` and it will prompt for a login
 * Browse to `https://localhost:7282/reset` and click confirm to build the database
 
 ## Resetting Data
