@@ -19,12 +19,13 @@ Challenges can be completed in any order, however following the suggested order 
 #### 2. Find the names of all tables and columns
 #### 3. Log in as an admin user
 #### 4. Get a list of usernames and passwords (bonus if passwords are in plain text)
-#### 5. Find a list of users who have tickets to a controversial event
+#### 5. Find a list of users who have tickets to a "controversial" event
 #### 6. Purchase (by paying for) a ticket to a "members only" event
 #### 7. "Aquire" a ticket to the sold out "Cats on Ice" event
 
 ## Tips
 * Go through the steps of purchasing a ticket and viewing the order first, this will give an idea of the features and processes involved
+* Be aware of what data is normally returned on a page 
 * Keep track of any useful data you retrieve
 * Keep a note of working exploits, you may be able to repurpose them later on
 * If you're getting a lot of invalid SQL type errors:
