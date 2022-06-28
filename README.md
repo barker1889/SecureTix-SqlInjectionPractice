@@ -27,7 +27,7 @@ Challenges can be completed in any order, however following the suggested order 
 * Go through the steps of purchasing a ticket and viewing the order first, this will give an idea of the features and processes involved
 * Keep track of any useful data you retrieve
 * Keep a note of working exploits, you may be able to repurpose them later on
-* If you exploits are constantly failing
- *  Make sure you're closing any string you may be injecting into
- *  Make sure you're commenting out the rest of the SQL statement after your exploit
- *  Try writing down what you think the query you're injecting into is doing, this will help you work out what payload you need to keep it a valid SQL statement
+* If you're getting a lot of invalid SQL type errors:
+  *  Make sure you're closing any string you may be injecting into
+  *  Make sure you're commenting out the rest of the SQL statement after your exploit
+  *  Try writing down what you think the query you're injecting into is doing, this will help you work out what payload you need to keep it a valid SQL statement
