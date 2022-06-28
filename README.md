@@ -20,7 +20,7 @@ Challenges can be completed in any order, however following the suggested order 
 #### 3. Log in as an admin user (Filter bypass+)
 #### 4. Oppourtunist - Get a list of usernames and password hashes to sell - passwords are more valuable as plain text (https://crackstation.net/ may be helpful...) 
 #### 5. Hacktivist - Expose anyone who has tickets to a "controversial" event
-#### 6. Sleight of hand - Purchase (by paying for) a ticket to a "members only" event
+#### 6. Imposter - Purchase (by paying for) a ticket to a "members only" event
 #### 7. Thief - "Aquire" a ticket to the sold out "Cats on Ice" event
 
 ## Tips
